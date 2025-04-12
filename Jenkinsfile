@@ -11,46 +11,46 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'dotnet build'
+                bat 'dotnet build'
             }
         }
         stage('Test') {
             steps {
-                sh 'dotnet test'
+                bat 'dotnet test'
             }
         }
         stage('Static Code Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh 'dotnet sonarscanner begin /k:"your-project-key" /d:sonar.login="your-sonar-token" /d:sonar.host.url="http://your-sonar-url"'
-                    sh 'dotnet build'
-                    sh 'dotnet sonarscanner end /d:sonar.login="your-sonar-token"'
+                    bat 'dotnet sonarscanner begin /k:"your-project-key" /d:sonar.login="your-sonar-token" /d:sonar.host.url="http://your-sonar-url"'
+                    bat 'dotnet build'
+                    bat 'dotnet sonarscanner end /d:sonar.login="your-sonar-token"'
                 }
             }
         }
         stage('Deliver') {
             steps {
-                sh 'dotnet publish -c Release -o ./publish'
+                bat 'dotnet publish -c Release -o ./publish'
             }
         }
         stage('Deploy to Dev') {
             steps {
-                sh 'echo Deploying to Dev'
+                bat 'echo Deploying to Dev'
             }
         }
         stage('Deploy to QAT') {
             steps {
-                sh 'echo Deploying to QAT'
+                bat 'echo Deploying to QAT'
             }
         }
         stage('Deploy to Staging') {
             steps {
-                sh 'echo Deploying to Staging'
+                bat 'echo Deploying to Staging'
             }
         }
         stage('Deploy to Production') {
             steps {
-                sh 'echo Deploying to Production'
+                bat 'echo Deploying to Production'
             }
         }
     }
