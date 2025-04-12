@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: "${SCM_URL}", branch: 'main' 
+                git url: "${SCM_URL}", branch: 'main'
             }
         }
         stage('Build') {
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'dotnet publish -c Release -o ./publish'
+                bat 'dotnet publish Devops-project -c Release -o ./publish'
             }
         }
         stage('Deploy to Dev') {
