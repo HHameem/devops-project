@@ -1,0 +1,7 @@
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\bin\Debug\Devops-project.exe.config
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\bin\Debug\Devops-project.exe
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\bin\Debug\Devops-project.pdb
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\obj\Debug\Devops-project.csproj.AssemblyReference.cache
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\obj\Debug\Devops-project.csproj.CoreCompileInputs.cache
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\obj\Debug\Devops-project.exe
+C:\Users\hafsh\source\repos\Devops-project\Devops-project\obj\Debug\Devops-project.pdb
