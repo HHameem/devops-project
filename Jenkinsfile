@@ -21,11 +21,7 @@ pipeline {
         }
         stage('Static Code Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
-                    bat 'dotnet sonarscanner begin /k:"your-project-key" /d:sonar.login="your-sonar-token" /d:sonar.host.url="http://your-sonar-url"'
-                    bat 'dotnet build'
-                    bat 'dotnet sonarscanner end /d:sonar.login="your-sonar-token"'
-                }
+                bat 'dotnet format --verify-no-changes'
             }
         }
         stage('Deliver') {
@@ -55,3 +51,4 @@ pipeline {
         }
     }
 }
+
